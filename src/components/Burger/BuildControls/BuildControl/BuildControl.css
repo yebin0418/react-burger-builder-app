@@ -1,4 +1,4 @@
-.buildControl{
+.BuildControl{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,7 +6,7 @@
 
 }
 
-.buildControl button{
+.BuildControl button{
   display: block;
   font: inherit;
   padding: 5px;
@@ -52,7 +52,7 @@
     color: white;
 }
 
-.BuildControl .More:hover,.BuildControl .More:active {
+.BuildControl .More:hover, .BuildControl .More:active {
     background-color: #99703F;
     color: white;
 }
