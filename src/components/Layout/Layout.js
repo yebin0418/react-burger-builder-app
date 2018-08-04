@@ -5,14 +5,29 @@ import classes from './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
-const layout = ( props ) => (
-    <Aux>
+const Layout extends Component
+{
+  state = {
+    showSideDrawer: true;
+  }
+
+  sideDrawerClosedHandler = ()=> {
+    this.setState({showSideDrawer: false});
+  }
+  render () {
+    return (
+      <Aux>
         <Toolbar />
-        <SideDrawer />
+        <SideDrawer
+          open = {this.state.showSideDrawer}
+          closed = {this.sideDrawerClosedHandler}/>
         <main className={classes.Content}>
-            {props.children}
+              {props.children}
         </main>
-    </Aux>
-);
+      </Aux>
+    )
+  }
+
+}
 
 export default layout;
